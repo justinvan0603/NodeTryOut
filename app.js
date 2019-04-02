@@ -26,7 +26,7 @@ app.use('/person',personRouter);
 
 var db = require('mongoose');
 db.Promise = global.Promise;
-db.connect(configurations.db.host + ':' + configurations.db.port + '/' + configurations.db.dbname,{useNewUrlParser: true})
+db.connect('mongodb+srv://thangvtq:<password>@cluster-nodetryout-u8yid.mongodb.net/test?retryWrites=true',{useNewUrlParser: true})
   .then(()=>{
     console.log("Database connected");
 })
