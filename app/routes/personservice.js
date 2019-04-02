@@ -27,6 +27,7 @@ router.get('/', function(req, res) {
   router.put('/:id',function(req,res){
     if(req.params.id){
       console.log("ABC");
+      console.log("CDE");
       Person.findOneAndUpdate(req.params.id,{name: req.body.name , address: req.body.address})
       .then(data => {res.json(data);})
       .catch(err=> {res.send(err);});
