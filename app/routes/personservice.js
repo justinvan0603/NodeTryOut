@@ -16,6 +16,7 @@ router.get('/', function(req, res) {
   });
   router.post('/',function(req,res){
     Person.create({name:"ThangVTQ", address:"Pestalozzistrasse"}).then(data =>{
+      console.log("ABC");
         res.json(data);
     }).catch(err => {
       console.log("Error: " + err);
